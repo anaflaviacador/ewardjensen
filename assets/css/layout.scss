@@ -437,6 +437,10 @@ main {
 		}
 	}
 
+	.tabela-mega {
+		table {width: calc(100% - 50px); min-width: 1110px;}
+	}
+
 	section.imagens{
 		margin: 50px 0;
 		@include tam-container();
