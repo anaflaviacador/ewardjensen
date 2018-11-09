@@ -328,6 +328,10 @@ main {
 
 		& + h2, & + h3 { padding-top: 15px; }
 		& + p, & + figure, & + table {padding-top: 50px;}
+
+		span a {
+			font-size: 0.7em;
+		}
 	}
 
 	table {
@@ -339,7 +343,7 @@ main {
 		@include tam-container();
 		margin-top: 100px;
 		margin-bottom: 100px;
-		border-collapse: collapse;
+		&,& * {border-collapse: collapse;}
 
 		&.thead-fixo{
 			background: $cor4;
@@ -367,15 +371,6 @@ main {
 			padding: 0.5em 0;
 		}
 
-		td{
-			&:first-child{
-				text-align: left;
-			}
-		}
-
-		th{
-			
-		}
 
 		th, td{
 			padding: 0.7em;
@@ -393,13 +388,7 @@ main {
 			background-color: lighten($cor1, 80%);
 
 			tr{
-				&:first-child{
-					th{
-						&:first-child{
-							text-align: left;
-						}
-					}
-				}
+				
 
 				&.paginacao{
 					padding: 0;
@@ -439,7 +428,30 @@ main {
 	}
 
 	.tabela-mega {
-		table {width: calc(100% - 50px); min-width: 1110px;}
+		width: 100%;
+		overflow-x: auto; margin: 0 auto;
+		
+		table {
+			width: 100%;
+			th, td{
+				padding: 3px;
+				border-left: 1px solid transparentize(black, 0.8);
+				border-right: 1px solid transparentize(black, 0.8);
+			}
+		}
+
+		@media (max-width: 1280px) {
+			table {
+				font-size: 12px;
+				line-height: 1.1;
+			}
+		}
+
+		@media (max-width: 1110px) {
+			table.thead-fixo {display: none;}
+		}
+
+		
 	}
 
 	section.imagens{
