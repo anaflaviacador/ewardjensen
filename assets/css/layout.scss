@@ -545,6 +545,24 @@ main {
 
 
 ////////////////////////////////////// FICHA CATALOGRAFICA ISBn
+dl {
+	line-height: 1.4;
+
+	h3 {padding: 0; margin-bottom: 40px}
+	
+	dt {
+		font-weight: bold;
+	}
+
+	dd {
+		margin: 0;
+		display: block;
+
+		& + dt {margin-top: 50px;}
+	}
+}
+
+
 .ficha-catalografica {
     @include flex(space-between);	
     // border: 1px solid $cor1;
