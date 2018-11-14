@@ -225,6 +225,8 @@ main {
 		// hyphens: auto;
 	}
 
+	p {text-align: justify;}
+
 	a[href*='http'], a[href*='www']{
 		overflow-wrap: break-word;
 		word-break: break-all;
