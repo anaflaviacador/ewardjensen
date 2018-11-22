@@ -155,9 +155,6 @@ header:not(#abertura){
 		@include flex-direction(column);
 		@include align-items(center);
 
-
-		svg g path {fill: $cor4}
-
 		h1{
 			margin: 1em 0 1.4em;
 			width: 800px;
